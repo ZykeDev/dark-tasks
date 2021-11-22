@@ -1,2 +1,2 @@
-# dark-tasks
-A Dark Theme for Microsoft Office Tasks/ToDo
+# Dark Tasks
+A Dark Theme for Microsoft Office Tasks/ToDo.
