@@ -1,0 +1,111 @@
+/* ==UserStyle==
+@name           Dark Tasks
+@author         Noya
+@namespace      github.com/ZykeDev
+@version        0.0.1
+@description    A Dark Theme for Microsoft Office Tasks/ToDo
+@updateURL      https://raw.githubusercontent.com/ZykeDev/dark-tasks/main/dark-tasks.user.css
+@homepageURL  	https://github.com/ZykeDev/dark-tasks
+@supportURL  	https://github.com/ZykeDev/dark-tasks/issues
+@preprocessor   uso
+@license	    CC BY-NC-SA 4.0
+
+==/UserStyle== */
+@-moz-document domain("to-do.office.com") {
+
+    :root {
+        color-scheme: dark; /* Chrome 81+ Only. Not supported by Firefox yet. */
+      
+        --bg: #212121;
+        --bg-lighter: #333;
+        --bg-darker: #000;
+        --accent: #0078D4;
+        --accent-hover: #106EBE;
+        --text: #FFF;
+        --search-background: #173b56;
+    }
+
+
+    .o365sx-navbar {
+        background-color: var(--accent);
+    }
+
+    #main .main-background {
+        color: var(--text);
+        background-color: var(--bg);
+    }
+
+    .leftColumn * {
+        color: var(--text) !important;
+        background-color: var(--bg-darker);
+    }
+    .listItem:hover {
+        background-color: var(--bg) !important;
+    }
+
+    .leftColumn span,
+    .leftColumn i {
+        background-color: transparent !important;
+    }
+
+
+
+    #tasks div {
+        background-color: var(--bg);
+    }
+
+
+    .o365cs-base .o365sx-appName,
+    .o365cs-base .o365sx-appName:visited,
+    .o365cs-base .o365sx-button {
+        background-color: var(--accent);
+        color: var(--text);
+    }
+
+    .o365cs-base .o365sx-button:hover {
+        background-color: var(--accent-hover);
+    }
+
+    .searchToolbar-icon,
+    .searchToolbar-icon:hover,
+    .searchToolbar:hover {
+        background-color: var(--search-background) !important;
+        border-color: var(--search-background);
+        box-shadow: 0 0 0 1px var(--accent-hover) !important;
+    }
+    input.searchToolbar-input[type=text]::placeholder {
+        color: #FFF;
+    }
+
+    .searchToolbar-icon:hover,
+    .searchToolbar:hover {
+        cursor: text !important;
+    }
+
+    .searchToolbar input.searchToolbar-input[type=text] {
+        background-color: var(--search-background) !important;
+        color: var(--text);
+    }
+
+
+    /* Actions above List */
+    .toolbarButton-inner,
+    /* Title of the List */
+    .listTitle,
+    /* Task List Title Edit Input */
+    .tasksToolbar-titleItem input,
+    /* Task Checkbox */
+    .checkBox,
+    /* Task Info */
+    .taskItemInfo-date,
+    .taskItemInfo-myDay,
+    /* Task Imporatant Star */
+    .importanceButton,
+    /* Add Icon in List Add & Task Add */
+    .baseAdd-icon,
+    /* Task Input */
+    #baseAddInput-addTask {
+        background-color: var(--bg);
+        color: var(--text);
+    }
+}
